@@ -1,4 +1,5 @@
 import React from "react";
+import header from "./components/header";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
