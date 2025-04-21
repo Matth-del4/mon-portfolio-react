@@ -18,3 +18,16 @@ header {
   width: 100%;
   background-color: beige;
 }
+
+.header-hero {
+  background-image: url("../public/images/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
