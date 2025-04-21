@@ -2,35 +2,43 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
+import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
+import Accueil from "./pages/accueil";
+import Projets from "./pages/projet";
+import Contact from "./pages/contact";
+import "bootstrap-icons/font/bootstrap-icons.css";
+
 function App() {
   return (
-    <div className="container mt-5">
-      <header className="text-center mb-5">
-        <h1 className="display-4">Matthieu Anquibou</h1>
-        <p className="lead">Développeur Web - Mobile</p>
-      </header>
+    <BrowserRouter>
+      <div className="container mt-5">
+        <nav className="mb-5">
+          <ul className="nav nav-pills justify-content-center">
+            <li className="nav-item">
+              <NavLink to="/" className="nav-link" end>
+                Accueil
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/projets" className="nav-link">
+                Projets
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/contact" className="nav-link">
+                Contact
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
 
-      <section className="mb-4">
-        <h2>À propos</h2>
-        <p>
-          Je suis actuellement une formation au CEF en développement web.
-          J'apprends React, Bootstrap, etc.
-        </p>
-      </section>
-
-      <section className="mb-4">
-        <h2>Mes compétences</h2>
-        <ul>
-          <li>Portfolio personnel</li>
-          <li>Calculatrice en JavaScript</li>
-          <li>Mini-jeu HTML/CSS</li>
-        </ul>
-      </section>
-
-      <footer className="text-center mt-5">
-        <button className="btn btn-primary">Me contacter</button>
-      </footer>
-    </div>
+        <Routes>
+          <Route path="/" element={<Accueil />} />
+          <Route path="/projets" element={<Projets />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
