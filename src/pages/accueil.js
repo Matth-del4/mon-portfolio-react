@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 function Accueil() {
   return (
     <>
@@ -7,7 +8,6 @@ function Accueil() {
       </header>
 
       <div className="row">
-        {/* Section À propos */}
         <section className="col-md-6 mb-4">
           <h2>À propos</h2>
           <p>
@@ -21,7 +21,6 @@ function Accueil() {
           </p>
         </section>
 
-        {/* Section Mes compétences */}
         <section className="col-md-6 mb-4">
           <h2>Mes compétences</h2>
 
@@ -85,7 +84,9 @@ function Accueil() {
 
       <footer className="text-center mt-5">
         <a href="/contact">
-          <button className="btn btn-primary">En savoir plus</button>
+          <Link to="/service" className="btn btn-primary">
+            En savoir plus
+          </Link>
         </a>
       </footer>
     </>

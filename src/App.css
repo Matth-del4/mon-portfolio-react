@@ -16,7 +16,6 @@
 
 header {
   width: 100%;
-  background-color: beige;
 }
 
 .header-hero {
@@ -30,4 +29,22 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.header-banner {
+  background-image: url("../public/images/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.card:hover {
+  background-color: #efefef;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
