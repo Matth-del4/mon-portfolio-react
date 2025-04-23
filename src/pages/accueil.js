@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 function Accueil() {
   return (
     <>
-      <header className="header-hero mb-5">
+      <header className="header-hero">
         <h1 className="display-4">Matthieu Anquibou</h1>
         <p className="lead">Développeur Web et Mobile</p>
       </header>
