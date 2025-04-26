@@ -22,7 +22,6 @@ function Projets() {
           </div>
         </div>
 
-        {/* Copie cette card 5 fois avec d'autres contenus ou images */}
         <div className="col-md-4 mb-4">
           <div className="card h-100">
             <div className="card-body text-center">
