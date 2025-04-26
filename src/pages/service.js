@@ -11,9 +11,17 @@ function Services() {
         <div className="row">
           <div className="col-md-4 mb-4">
             <div className="card h-100">
-              <div className="card-body">
-                <h5 className="card-title text-center fw-bold">UX Design</h5>
-                <p className="card-text">
+              <div className="card-body d-flex flex-column align-items-center">
+                <i
+                  className="bi bi-brush"
+                  style={{
+                    fontSize: "2rem",
+                    marginBottom: "15px",
+                    marginTop: "15px",
+                  }}
+                ></i>
+                <h2 className="card-title text-center fw-bold">UX Design</h2>
+                <p className="card-text text-center">
                   L'UX Design est une discipline qui consiste à concevoir des
                   produits (site web, applications mobiles, logiciels, objets
                   connectés etc.) en plaçant l'utilisateur au centre des
@@ -26,43 +34,49 @@ function Services() {
 
           <div className="col-md-4 mb-4">
             <div className="card h-100">
-              <img
-                src="https://via.placeholder.com/300x150"
-                className="card-img-top"
-                alt="Applications React"
-              />
-              <div className="card-body">
-                <h5 className="card-title text-center fw-bold">
-                  Applications React
-                </h5>
-                <p className="card-text">
-                  Développement d'applications dynamiques avec React JS.
+              <div className="card-body d-flex flex-column align-items-center">
+                <i
+                  class="bi bi-code-slash"
+                  style={{
+                    fontSize: "2rem",
+                    marginBottom: "15px",
+                    marginTop: "15px",
+                  }}
+                ></i>
+                <h2 className="card-title text-center fw-bold">
+                  Développement web
+                </h2>
+                <p className="card-text text-center">
+                  Me développement de site web consiste à créer des sites
+                  internet en utilisant des langages de programmation (HTML,
+                  CSS, PHP, etc.) et des frameworks (Boostraps, React, Angular,
+                  etc.).
                 </p>
-                <a href="#" className="btn btn-primary">
-                  Voir plus
-                </a>
               </div>
             </div>
           </div>
 
           <div className="col-md-4 mb-4">
             <div className="card h-100">
-              <img
-                src="https://via.placeholder.com/300x150"
-                className="card-img-top"
-                alt="SEO"
-              />
-              <div className="card-body">
-                <h5 className="card-title text-center fw-bold">
-                  SEO & Référencement
-                </h5>
-                <p className="card-text">
-                  Optimisation du référencement naturel pour améliorer votre
-                  visibilité.
+              <div className="card-body d-flex flex-column align-items-center">
+                <i
+                  class="bi bi-search"
+                  style={{
+                    fontSize: "2rem",
+                    marginBottom: "15px",
+                    marginTop: "15px",
+                  }}
+                ></i>
+                <h2 className="card-title text-center fw-bold">
+                  Référencement
+                </h2>
+                <p className="card-text text-center">
+                  Le référencement naturel (SEO) est une technique qui consiste
+                  à optimiser un site web pour le faire remonter dans les
+                  résultats des moteurs de recherche (Google, Bing, Yahoo,
+                  etc.). L'objectif est d'attirer un maximum de visiteurs
+                  qualifiés sur le site.
                 </p>
-                <a href="#" className="btn btn-primary">
-                  Voir plus
-                </a>
               </div>
             </div>
           </div>
