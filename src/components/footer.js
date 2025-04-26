@@ -64,23 +64,28 @@ function Footer() {
             <p>Navigation</p>
             <ul className="list-unstyled">
               <li>
-                <Link to="/" className="text-light text-decoration-none">
+                <Link to="/" className="text-light">
                   Accueil
                 </Link>
               </li>
               <li>
-                <Link to="/service" className="text-light text-decoration-none">
+                <Link to="/service" className="text-light">
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/projets" className="text-light text-decoration-none">
+                <Link to="/projets" className="text-light">
                   Projets
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-light text-decoration-none">
+                <Link to="/contact" className="text-light">
                   Contact
+                </Link>
+              </li>
+              <li>
+                <Link to="/mentions" className="text-light">
+                  Mentions légales
                 </Link>
               </li>
             </ul>
@@ -90,17 +95,17 @@ function Footer() {
             <p>Derniers projets</p>
             <ul className="list-unstyled">
               <li>
-                <Link to="/projets" className="text-light text-decoration-none">
+                <Link to="/projets" className="text-light">
                   Projet 4
                 </Link>
               </li>
               <li>
-                <Link to="/projets" className="text-light text-decoration-none">
+                <Link to="/projets" className="text-light">
                   Projet 5
                 </Link>
               </li>
               <li>
-                <Link to="/projets" className="text-light text-decoration-none">
+                <Link to="/projets" className="text-light">
                   Projet 6
                 </Link>
               </li>
