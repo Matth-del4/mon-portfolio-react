@@ -2,8 +2,22 @@ import { Link } from "react-router-dom";
 function Accueil() {
   return (
     <>
+      <div>
+        <Helmet>
+          <title>Matthieu AQB - Développeur Web</title>
+          <meta
+            name="description"
+            content="Bienvenue sur le portfolio de Matthieu AQB."
+          />
+          <meta name="robots" content="index, follow" />
+          <meta
+            name="keywords"
+            content="portfolio, développeur web, React, HTML, CSS, Bootstrap, projets"
+          />
+        </Helmet>
+      </div>
       <header className="header-hero">
-        <h1 className="display-4">Matthieu Anquibou</h1>
+        <h1 className="display-4">Matthieu AQB</h1>
         <p className="lead">Développeur Web et Mobile</p>
       </header>
 
