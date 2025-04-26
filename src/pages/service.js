@@ -6,7 +6,7 @@ function Services() {
       <div className="header-banner"></div>
 
       <div className="container mt-5">
-        <h1 className="display-4 text-center mb-5">Mon offres de service</h1>
+        <h1 className="display-4 text-center mb-5">Mon offre de service</h1>
 
         <div className="row">
           <div className="col-md-4 mb-4">
