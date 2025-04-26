@@ -53,3 +53,10 @@ header {
   background-color: #5aa3f7;
   border-color: #5aa3f7;
 }
+
+.footer-icon:hover {
+  color: white;
+}
+.footer-link:hover {
+  font-weight: bold;
+}
