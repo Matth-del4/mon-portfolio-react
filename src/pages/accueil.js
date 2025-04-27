@@ -5,9 +5,18 @@ import Titre from "../components/titre";
 
 function Accueil() {
   const [message, setMessage] = useState("Bienvenue sur mon portfolio !");
+  const [showModal, setShowModal] = useState(false); // Hook pour la modale
 
   const changerMessage = () => {
     setMessage("Merci pour votre visite !");
+  };
+
+  const ouvrirModal = () => {
+    setShowModal(true);
+  };
+
+  const fermerModal = () => {
+    setShowModal(false);
   };
 
   return (
@@ -121,6 +130,67 @@ function Accueil() {
           Changer le message
         </button>
       </div>
+
+      <div className="text-center mt-5">
+        <button className="btn btn-success" onClick={ouvrirModal}>
+          Voir mon profil GitHub
+        </button>
+      </div>
+
+      {showModal && (
+        <div
+          className="modal fade show d-block"
+          tabIndex="-1"
+          style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
+        >
+          <div className="modal-dialog modal-dialog-centered">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title">Mon profil GitHub</h5>
+                <button
+                  type="button"
+                  className="btn-close"
+                  onClick={fermerModal}
+                ></button>
+              </div>
+              <div className="modal-body text-center">
+                <img
+                  src="/images/john-doe-about.jpg"
+                  alt="Profil GitHub"
+                  className="img-fluid rounded-circle mb-3"
+                  style={{
+                    width: "150px",
+                    height: "150px",
+                    objectFit: "cover",
+                  }}
+                />
+                <h5>
+                  <a
+                    href="https://github.com/Matth-del4"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Matthieu AQB
+                  </a>
+                </h5>
+                <p className="text-muted">
+                  Apprentissage en développement web et mobile
+                </p>
+                <ul className="list-unstyled">
+                  <li> Repositories : 1</li>
+                  <li> Followers : 16</li>
+                  <li> Following : 0</li>
+                </ul>
+              </div>
+              <div className="modal-footer">
+                <button className="btn btn-secondary" onClick={fermerModal}>
+                  Fermer
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       <footer className="text-center mt-5">
         <Link to="/service" className="btn btn-primary">
