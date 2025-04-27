@@ -1,6 +1,24 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { useState } from "react";
+import Titre from "../components/titre";
+
 function Accueil() {
+  const [message, setMessage] = useState("Bienvenue sur mon portfolio !");
+  const [showModal, setShowModal] = useState(false); // Hook pour la modale
+
+  const changerMessage = () => {
+    setMessage("Merci pour votre visite !");
+  };
+
+  const ouvrirModal = () => {
+    setShowModal(true);
+  };
+
+  const fermerModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <>
       <div>
@@ -17,6 +35,7 @@ function Accueil() {
           />
         </Helmet>
       </div>
+
       <header className="header-hero">
         <h1 className="display-4">Matthieu AQB</h1>
         <p className="lead">Développeur Web et Mobile</p>
@@ -24,7 +43,7 @@ function Accueil() {
 
       <div className="row mt-5">
         <section className="col-md-6 mb-4">
-          <h2>À propos</h2>
+          <Titre texte="À propos" />
           <div className="text-center">
             <img
               src="/images/john-doe-about.jpg"
@@ -45,7 +64,7 @@ function Accueil() {
         </section>
 
         <section className="col-md-6 mb-4">
-          <h2>Mes compétences</h2>
+          <Titre texte="Mes compétences" />
 
           <p>HTML</p>
           <div className="progress mb-3">
@@ -105,12 +124,78 @@ function Accueil() {
         </section>
       </div>
 
+      <div className="text-center mt-5">
+        <h4>{message}</h4>
+        <button onClick={changerMessage} className="btn btn-primary mt-3">
+          Changer le message
+        </button>
+      </div>
+
+      <div className="text-center mt-5">
+        <button className="btn btn-success" onClick={ouvrirModal}>
+          Voir mon profil GitHub
+        </button>
+      </div>
+
+      {showModal && (
+        <div
+          className="modal fade show d-block"
+          tabIndex="-1"
+          style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
+        >
+          <div className="modal-dialog modal-dialog-centered">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title">Mon profil GitHub</h5>
+                <button
+                  type="button"
+                  className="btn-close"
+                  onClick={fermerModal}
+                ></button>
+              </div>
+              <div className="modal-body text-center">
+                <img
+                  src="/images/john-doe-about.jpg"
+                  alt="Profil GitHub"
+                  className="img-fluid rounded-circle mb-3"
+                  style={{
+                    width: "150px",
+                    height: "150px",
+                    objectFit: "cover",
+                  }}
+                />
+                <h5>
+                  <a
+                    href="https://github.com/Matth-del4"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Matthieu AQB
+                  </a>
+                </h5>
+                <p className="text-muted">
+                  Apprentissage en développement web et mobile
+                </p>
+                <ul className="list-unstyled">
+                  <li> Repositories : 1</li>
+                  <li> Followers : 16</li>
+                  <li> Following : 0</li>
+                </ul>
+              </div>
+              <div className="modal-footer">
+                <button className="btn btn-secondary" onClick={fermerModal}>
+                  Fermer
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       <footer className="text-center mt-5">
-        <a href="/contact">
-          <Link to="/service" className="btn btn-primary">
-            En savoir plus
-          </Link>
-        </a>
+        <Link to="/service" className="btn btn-primary">
+          En savoir plus
+        </Link>
       </footer>
     </>
   );

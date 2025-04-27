@@ -4,13 +4,21 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 
 function Footer() {
   return (
-    <footer className="bg-dark text-light py-5 mt-5">
+    <footer className="bg-dark text-light py-5 mt-5 footer">
       <div className="container">
         <div className="row text-center">
           <div className="col-md-4 mb-4">
-            <strong className="footer-title">Matthieu AQB</strong>
-            <p>123 Rue de Reuilly, 75012 Paris</p>
-            <p>06 12 34 56 78</p>
+            <strong className="footer-title d-block mb-3">Matthieu AQB</strong>
+            <a
+              href="https://www.google.com/maps/dir/123+Rue+de+Reuilly,+Paris//@48.840703,2.3124768,12z/data=!4m9!4m8!1m5!1m1!1s0x47e6726ea3c8cb23:0x8310ebac7f54a449!2m2!1d2.3948777!2d48.8406194!1m0!3e0?entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              123 Rue de Reuilly, 75012 Paris
+            </a>
+            <p>
+              <a href="tel:+33612345678">06 12 34 56 78</a>
+            </p>
 
             <div className="d-flex justify-content-center gap-3 mt-3">
               <a
@@ -19,15 +27,10 @@ function Footer() {
                 rel="noopener noreferrer"
                 className="text-light"
               >
-                <i className="bi bi-github" style={{ fontSize: "1.5rem" }}></i>
-              </a>
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-light"
-              >
-                <i className="bi bi-twitter" style={{ fontSize: "1.5rem" }}></i>
+                <i
+                  className="bi bi-github footer-icon"
+                  style={{ fontSize: "1.5rem" }}
+                ></i>
               </a>
               <a
                 href="#"
@@ -36,7 +39,18 @@ function Footer() {
                 className="text-light"
               >
                 <i
-                  className="bi bi-linkedin"
+                  className="bi bi-twitter footer-icon"
+                  style={{ fontSize: "1.5rem" }}
+                ></i>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-light"
+              >
+                <i
+                  className="bi bi-linkedin footer-icon"
                   style={{ fontSize: "1.5rem" }}
                 ></i>
               </a>
@@ -44,7 +58,7 @@ function Footer() {
           </div>
 
           <div className="col-md-4 mb-4">
-            <strong className="footer-title">Liens utiles</strong>
+            <strong className="footer-title d-block mb-3">Liens utiles</strong>
             <ul className="list-unstyled">
               <li>
                 <Link to="/" className="text-light text-decoration-none">
@@ -78,7 +92,9 @@ function Footer() {
           </div>
 
           <div className="col-md-4 mb-4">
-            <strong className="footer-title">Derniers projets</strong>
+            <strong className="footer-title d-block mb-3">
+              Derniers projets
+            </strong>
             <ul className="list-unstyled">
               <li>
                 <Link to="/projets" className="text-light text-decoration-none">
@@ -99,8 +115,10 @@ function Footer() {
           </div>
         </div>
 
-        <div className="text-center mt-4">
-          <small>© 2025 Matthieu AQB - Tous droits réservés.</small>
+        <div className="row mt-4">
+          <div className="col-12 text-center">
+            <small>© 2025 Matthieu AQB - Tous droits réservés.</small>
+          </div>
         </div>
       </div>
     </footer>
