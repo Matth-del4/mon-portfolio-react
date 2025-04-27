@@ -25,6 +25,14 @@ function Accueil() {
       <div className="row mt-5">
         <section className="col-md-6 mb-4">
           <h2>À propos</h2>
+          <div className="text-center">
+            <img
+              src="/images/john-doe-about.jpg"
+              alt="Portrait de développeur web"
+              className="img-fluid rounded mb-3"
+              style={{ maxWidth: "300px" }}
+            />
+          </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
