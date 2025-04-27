@@ -1,6 +1,15 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { useState } from "react";
+import Titre from "../components/titre";
+
 function Accueil() {
+  const [message, setMessage] = useState("Bienvenue sur mon portfolio !");
+
+  const changerMessage = () => {
+    setMessage("Merci pour votre visite !");
+  };
+
   return (
     <>
       <div>
@@ -17,6 +26,7 @@ function Accueil() {
           />
         </Helmet>
       </div>
+
       <header className="header-hero">
         <h1 className="display-4">Matthieu AQB</h1>
         <p className="lead">Développeur Web et Mobile</p>
@@ -24,7 +34,7 @@ function Accueil() {
 
       <div className="row mt-5">
         <section className="col-md-6 mb-4">
-          <h2>À propos</h2>
+          <Titre texte="À propos" />
           <div className="text-center">
             <img
               src="/images/john-doe-about.jpg"
@@ -45,7 +55,7 @@ function Accueil() {
         </section>
 
         <section className="col-md-6 mb-4">
-          <h2>Mes compétences</h2>
+          <Titre texte="Mes compétences" />
 
           <p>HTML</p>
           <div className="progress mb-3">
@@ -105,12 +115,17 @@ function Accueil() {
         </section>
       </div>
 
+      <div className="text-center mt-5">
+        <h4>{message}</h4>
+        <button onClick={changerMessage} className="btn btn-primary mt-3">
+          Changer le message
+        </button>
+      </div>
+
       <footer className="text-center mt-5">
-        <a href="/contact">
-          <Link to="/service" className="btn btn-primary">
-            En savoir plus
-          </Link>
-        </a>
+        <Link to="/service" className="btn btn-primary">
+          En savoir plus
+        </Link>
       </footer>
     </>
   );
