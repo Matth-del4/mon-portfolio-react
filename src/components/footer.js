@@ -7,7 +7,6 @@ function Footer() {
     <footer className="footer bg-dark text-light py-4 mt-5">
       <div className="container">
         <div className="row">
-          {/* Colonne 1 : Infos de contact */}
           <div className="col-md-4 mb-4">
             <strong>Matthieu AQB</strong>
             <p>
@@ -16,14 +15,17 @@ function Footer() {
                 href="https://www.google.com/maps/dir/123+Rue+de+Reuilly,+Paris//@48.840703,2.3124768,12z"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-light text-decoration-underline"
+                className="text-light text-decoration-none"
               >
                 123 Rue de Reuilly, 75012 Paris
               </a>
             </p>
             <p>
               <i className="bi bi-telephone"></i> Téléphone :{" "}
-              <a href="tel:+33612345678" className="text-light">
+              <a
+                href="tel:+33612345678"
+                className="text-light text-decoration-none"
+              >
                 06 12 34 56 78
               </a>
             </p>
@@ -32,7 +34,7 @@ function Footer() {
                 href="https://github.com/Matth-del4/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-light"
+                className="text-light text-decoration-none"
               >
                 <i className="bi bi-github" style={{ fontSize: "1.5rem" }}></i>
               </a>
@@ -58,9 +60,8 @@ function Footer() {
             </div>
           </div>
 
-          {/* Colonne 2 : Navigation */}
           <div className="col-md-4 mb-4">
-            <strong>Navigation</strong>
+            <strong>Liens utiles</strong>
             <ul className="list-unstyled">
               <li>
                 <Link to="/" className="text-light text-decoration-none">
@@ -93,7 +94,6 @@ function Footer() {
             </ul>
           </div>
 
-          {/* Colonne 3 : Derniers projets */}
           <div className="col-md-4 mb-4">
             <strong>Derniers projets</strong>
             <ul className="list-unstyled">
