@@ -4,37 +4,20 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 
 function Footer() {
   return (
-    <footer className="footer bg-dark text-light py-4 mt-5">
+    <footer className="bg-dark text-light py-5 mt-5">
       <div className="container">
-        <div className="row">
+        <div className="row text-center">
           <div className="col-md-4 mb-4">
-            <strong>Matthieu AQB</strong>
-            <p>
-              <i className="bi bi-geo-alt"></i> Adresse :{" "}
+            <strong className="footer-title">Matthieu AQB</strong>
+            <p>123 Rue de Reuilly, 75012 Paris</p>
+            <p>06 12 34 56 78</p>
+
+            <div className="d-flex justify-content-center gap-3 mt-3">
               <a
-                href="https://www.google.com/maps/dir/123+Rue+de+Reuilly,+Paris//@48.840703,2.3124768,12z"
+                href="https://github.com/Matth-del4"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-light text-decoration-none"
-              >
-                123 Rue de Reuilly, 75012 Paris
-              </a>
-            </p>
-            <p>
-              <i className="bi bi-telephone"></i> Téléphone :{" "}
-              <a
-                href="tel:+33612345678"
-                className="text-light text-decoration-none"
-              >
-                06 12 34 56 78
-              </a>
-            </p>
-            <div className="d-flex gap-3 mt-3">
-              <a
-                href="https://github.com/Matth-del4/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-light text-decoration-none"
+                className="text-light"
               >
                 <i className="bi bi-github" style={{ fontSize: "1.5rem" }}></i>
               </a>
@@ -61,7 +44,7 @@ function Footer() {
           </div>
 
           <div className="col-md-4 mb-4">
-            <strong>Liens utiles</strong>
+            <strong className="footer-title">Liens utiles</strong>
             <ul className="list-unstyled">
               <li>
                 <Link to="/" className="text-light text-decoration-none">
@@ -95,7 +78,7 @@ function Footer() {
           </div>
 
           <div className="col-md-4 mb-4">
-            <strong>Derniers projets</strong>
+            <strong className="footer-title">Derniers projets</strong>
             <ul className="list-unstyled">
               <li>
                 <Link to="/projets" className="text-light text-decoration-none">
