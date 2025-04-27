@@ -22,7 +22,7 @@ function Accueil() {
         <p className="lead">Développeur Web et Mobile</p>
       </header>
 
-      <div className="row">
+      <div className="row mt-5">
         <section className="col-md-6 mb-4">
           <h2>À propos</h2>
           <p>
