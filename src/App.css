@@ -54,34 +54,31 @@ header {
   border-color: #5aa3f7;
 }
 
-.footer-icon:hover {
-  color: white;
+footer {
+  min-height: 250px;
 }
-.footer-link:hover {
+
+.footer a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer a:hover {
+  text-decoration: underline;
   font-weight: bold;
 }
 
-.footer {
-  background-color: #f8f9fa;
-  padding: 20px 0;
-  margin-top: 50px;
+.footer-icon {
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
 }
 
-.footer .container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 30px;
+.footer-icon:hover {
+  opacity: 1;
 }
 
-.footer p,
-.footer a {
-  margin: 0;
-  font-size: 0.9rem;
-}
 .footer-title {
-  display: block;
   font-size: 1.25rem;
   font-weight: bold;
-  margin-bottom: 1rem;
 }
